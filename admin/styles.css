@@ -1,0 +1,365 @@
+/* Footer Styles for CarParts TZ */
+:root {
+  /* Footer-specific color variables */
+  --footer-bg: #1e293b;
+  --footer-text: #cbd5e1;
+  --footer-heading: #f8fafc;
+  --footer-link: #94a3b8;
+  --footer-link-hover: #ffffff;
+  --footer-border: #334155;
+  --footer-bottom-bg: #0f172a;
+  --social-hover: #4f46e5;
+  --contact-icon: #64748b;
+}
+
+/* Footer Main Container */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  margin-top: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle background pattern */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(79, 70, 229, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.footer .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer Content Grid */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  padding: 3rem 0 2rem;
+}
+
+@media (min-width: 640px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+  }
+}
+
+/* Footer Sections */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section h3 {
+  color: var(--footer-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--social-hover), transparent);
+}
+
+.footer-section h4 {
+  color: var(--footer-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  position: relative;
+}
+
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--social-hover), transparent);
+}
+
+.footer-section p {
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+  color: var(--footer-text);
+}
+
+/* Footer Lists */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.footer-section ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--social-hover);
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.footer-section ul li:hover::before {
+  transform: translateX(2px);
+}
+
+.footer-section ul li a {
+  color: var(--footer-link);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-section ul li a:hover {
+  color: var(--footer-link-hover);
+  padding-left: 0.25rem;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--footer-link);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--social-hover);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.social-links a:hover::before {
+  left: 100%;
+}
+
+.social-links a i {
+  font-size: 1.125rem;
+  z-index: 1;
+  position: relative;
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.contact-info p:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding-left: 0.5rem;
+}
+
+.contact-info p i {
+  color: var(--social-hover);
+  margin-right: 0.75rem;
+  width: 1.25rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid var(--footer-border);
+  background-color: var(--footer-bottom-bg);
+  padding: 1.5rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.footer-bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--social-hover), transparent);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--footer-link);
+  font-size: 0.875rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 639px) {
+  .footer-content {
+    padding: 2rem 0 1.5rem;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-section h3::after,
+  .footer-section h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .contact-info p {
+    justify-content: center;
+  }
+}
+
+/* Animation for footer sections on scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.footer-section:nth-child(1) { animation-delay: 0.1s; }
+.footer-section:nth-child(2) { animation-delay: 0.2s; }
+.footer-section:nth-child(3) { animation-delay: 0.3s; }
+.footer-section:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover effect for the entire footer section */
+.footer-section {
+  transition: transform 0.2s ease;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.footer-section:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Special styling for the brand section */
+.footer-section:first-child {
+  position: relative;
+}
+
+.footer-section:first-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--social-hover), transparent);
+  border-radius: 2px;
+}
+
+/* Enhanced mobile experience */
+@media (max-width: 480px) {
+  .footer {
+    font-size: 0.9rem;
+  }
+  
+  .social-links a {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  
+  .social-links a i {
+    font-size: 1rem;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.25rem;
+  }
+  
+  .footer-section h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .footer {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  .social-links {
+    display: none;
+  }
+}
