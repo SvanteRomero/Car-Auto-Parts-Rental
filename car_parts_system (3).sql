@@ -119,7 +119,8 @@ INSERT INTO `categories` (`id`, `name`, `description`, `created_at`) VALUES
 (8, 'Exhaust System', 'Exhaust pipes, mufflers, and catalytic converters', '2025-06-01 19:43:43'),
 (9, 'Body Parts', 'Bumpers, mirrors, and body accessories', '2025-06-01 19:43:43'),
 (10, 'Interior', 'Seats, dashboard, and interior accessories', '2025-06-01 19:43:43'),
-(11, 'Performance Upgrades', 'High-performance parts for enhanced vehicle performance', '2025-06-02 06:22:27'),
+(11, 'Performance Upgrades', 'High-performance parts for enhanced vehicle performance',git remote -v
+ '2025-06-02 06:22:27'),
 (12, 'Maintenance & Service', 'Regular maintenance and service parts', '2025-06-02 06:22:27'),
 (13, 'Tires & Wheels', 'Tires, rims, and wheel accessories', '2025-06-02 06:22:27'),
 (14, 'Audio & Electronics', 'Car audio systems and electronic accessories', '2025-06-02 06:22:27'),
